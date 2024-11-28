@@ -10,7 +10,7 @@ export default function AddHabitForm({ handleAddHabit }) {
     if (!habitName.trim()) {
       return;
     }
-    
+
     handleAddHabit(habitName);
 
     setHabitName("");
@@ -23,16 +23,15 @@ export default function AddHabitForm({ handleAddHabit }) {
 
   return (
     //TODO: add a form to add a new habit
-      <form className="add-form" onSubmit={handleSubmit}>
-        <div className="phone">
-          <input
-            id="phone-input"
-            placeholder="Enter habit name..."
-            value={habitName}
-            onChange={handleHabitChange}
-          />
-        </div>
-        <button>Submit</button>
-      </form>
-    );
-  }
+    <form className="add-form" onSubmit={handleSubmit}>
+      <div className="phone">
+        <input
+          placeholder="New Habit"
+          value={habitName}
+          onChange={handleHabitChange}
+        />
+      </div>
+      <button>Add Habit</button>
+    </form>
+  );
+}
